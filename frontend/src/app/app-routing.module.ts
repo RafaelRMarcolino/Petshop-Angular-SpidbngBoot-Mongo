@@ -6,13 +6,11 @@ import { UsersListComponent } from './components/page/users-list/users-list.comp
 import { UsersEditComponent } from './components/page/users-edit/users-edit.component';
 
 const routes: Routes = [
-  {path: "", redirectTo: "home",  pathMatch: "full"},
-  {path: "home", component: HomeComponent},
-  {path: "newusers", component: UsersNewComponent},
-  {path: "/sers/edit-users", component: UsersEditComponent},
-  {path: "users", component: UsersListComponent},
-
-  
+  {path: '', redirectTo: 'home',  pathMatch: 'full'},
+  {path: 'home', component: HomeComponent},
+  {path:  'users/newusers', component: UsersNewComponent},
+  {path: 'edit-users', component: UsersEditComponent},
+  {path: 'users', component: UsersListComponent},
 
 ];
 

@@ -1,0 +1,9 @@
+.navbar{
+    padding: 20px 10px;
+    background-color: rgb(103, 152, 243);
+    letter-spacing: 3px;
+}
+
+.navbar a:hover{
+    color: rgb(165, 136, 42);
+}

@@ -7,6 +7,8 @@ import { HomeComponent } from './components/home/home.component';
 import { UsersNewComponent } from './components/page/users-new/users-new.component';
 import { UsersEditComponent } from './components/page/users-edit/users-edit.component';
 import { UsersListComponent } from './components/page/users-list/users-list.component';
+import { NavComponent } from './components/nav/nav.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { UsersListComponent } from './components/page/users-list/users-list.comp
     HomeComponent,
     UsersNewComponent,
     UsersEditComponent,
-    UsersListComponent
+    UsersListComponent,
+    NavComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
