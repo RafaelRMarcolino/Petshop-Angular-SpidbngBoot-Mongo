@@ -4,7 +4,7 @@ import javax.persistence.Id;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "datanase_sequences")
+@Document(collection = "database_sequences")
 public class DatabaseSequences {
 	
 	@Id
