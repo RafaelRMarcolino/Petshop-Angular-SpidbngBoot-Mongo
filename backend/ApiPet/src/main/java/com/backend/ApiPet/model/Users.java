@@ -83,7 +83,7 @@ public class Users {
 	}
 
 
-	public void setPhone(String phone) {
+	public void setPhone(String phone) {	
 		this.phone = phone;
 	}
 

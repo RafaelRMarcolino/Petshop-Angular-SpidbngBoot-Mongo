@@ -1,10 +1,13 @@
 package com.backend.ApiPet.model;
 
+import javax.persistence.Id;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "datanase_sequences")
-public class Database_Sequences {
+public class DatabaseSequences {
 	
+	@Id
 	private String id;
 	
 	private long seq;
