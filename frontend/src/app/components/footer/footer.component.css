@@ -1,0 +1,32 @@
+footer{
+    border-top: 1px solid #2c2b24;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    height: 190px;
+    background-color: #2e2e2ba1;
+    color: aliceblue;
+
+}
+
+h3{
+    font-size: 25px;
+    color: #2c2b24;
+    
+
+}
+
+.cards{
+    border: 1px solid red;
+    padding: 0;
+}
+
+.cards1{
+    text-align: right;
+}
+
+.icon{
+    font-size: 20px;
+    padding: 3px;
+}
+
