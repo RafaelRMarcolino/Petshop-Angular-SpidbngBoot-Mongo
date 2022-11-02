@@ -9,8 +9,10 @@ import { Router } from '@angular/router';
 })
 export class UsersListComponent implements OnInit {
 
-  listData: any = [];
+  titulo: String = "Todos os clientes"
 
+  listData: any = [];
+  dados: any = [];
 
   constructor(
     public service : UsersService
@@ -25,10 +27,19 @@ export class UsersListComponent implements OnInit {
   listUsers(){
      this.service.getAllusers().subscribe((data: {}) => {
       this.listData = data;
+      this.dados = data
     })
   }
 
 
+  deleteUser(id: any){
+    if(window.confirm("Deseja excluir o cliente ")){
+      
+    this.service.deleteUsers(id).subscribe(() => {
+      this.listUsers()
+    })
+    }
+  }
 
 
 

@@ -13,6 +13,7 @@ import { Users } from '../model/Users';
 })
 export class UsersService {
 
+
   constructor(private http:HttpClient) { }
 
   apiUrl: String = 'http://localhost:8080';
@@ -45,7 +46,7 @@ export class UsersService {
   }
 
   deleteUsers(id: any){
-    return this.http.delete<Users>(this.apiUrl+'/api/usuarios/' + id).pipe(retry(1), catchError(this.tratarErro));
+    return this.http.delete<Users>(this.apiUrl+'/api/usuarios/'+id, this.autorizacao).pipe(retry(1), catchError(this.tratarErro));
   }
 
 

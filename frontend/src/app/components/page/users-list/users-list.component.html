@@ -1,23 +1,31 @@
-<div class="col-md-10">
+<div class="col-md-10 ">
 
+  <div class="title"> <h2>{{titulo}}</h2> </div>
     <table class="table">
-        <thead>
+        <thead class="text-center">
           <tr>
             <th scope="col">#</th>
             <th scope="col">Nome</th>
             <th scope="col">Email</th>
             <th scope="col">Telefone</th>
+            <th scope="col">Data Cadastro</th>
+            <th scope="col">Opções</th>
+
+
           </tr>
         </thead>
         <tbody>
             
           <tr *ngFor="let data of listData">
             <th scope="row">{{data.id}}</th>
-            <td>{{data.name}}</td>
-            <td>{{data.email}}</td>
-            <td>{{data.phone}}</td>
+            <td class="name">{{data.name}}</td>
+            <td class="email">{{data.email}}</td>
+            <td class="phone text-center">{{data.phone}}</td>
+            <td class="date text-center">{{data.date | date: 'dd/MM/yyyy'  }}</td>
+            <td class="btn btn-primary">Detalhes</td>
+            <td class="btn btn-success">Editar</td>
+            <td class="btn btn-danger" (click)="deleteUser(data.id)">Deletar</td>
           </tr>
-          
         </tbody>
       </table>
 </div>

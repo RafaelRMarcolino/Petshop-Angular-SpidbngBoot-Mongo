@@ -9,6 +9,7 @@ import javax.xml.registry.infomodel.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -72,10 +73,11 @@ public class UsersController {
 
 	}
 	
+	@DeleteMapping("/usuarios/{id}")
 	public Map<String, Boolean > deleteUsers(@PathVariable(value = "id") Long id) throws ResourceNotFoundException{
 		
 		Users obj = repo.findById(id).orElseThrow(() -> new ResourceNotFoundException("Cliente não existe " + id));
-		
+		repo.delete(obj);
 		Map<String, Boolean> response = new HashMap<>();
 		
 		return response;
