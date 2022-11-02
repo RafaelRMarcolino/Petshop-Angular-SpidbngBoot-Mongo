@@ -1,0 +1,49 @@
+<div class="content">
+    <h2 class="text-center">Cadastre um cliente</h2>
+
+    <div class="row">
+        <form
+        class="was-validated"
+        id="usersForm"
+        #usersForm="ngForm"
+        (ngSubmit)="inserUsert(usersForm)"
+        >
+
+            <div class="col-md-8">
+
+                Nome<input type="text"
+                    id="name"
+                    #name="ngModel"
+                    name="name"
+                    [(ngModel)]="userDetail.name"
+                placeholder="Digite o nome" class="form-control" required>
+
+                Email<input type="text"
+                id="email"
+                #email="ngModel"
+                name="email"
+                [(ngModel)]="userDetail.email"
+                 placeholder="Digite o email" class="form-control" required>
+
+            </div>
+            <div class="col-md-8">
+
+                Telefone<input type="text"
+                id="phone"
+                #phone="ngModel"
+                name="phone"
+                [(ngModel)]="userDetail.phone"
+                placeholder="Digite o Telefone (XX)xxxx-xxxx"
+                 class="form-control" required>
+
+                <br/>
+                Data:
+                <input type="date" class="form-control" id="date" #date="ngModel" name="date" [(ngModel)]="userDetail.date" required>
+            </div>
+            <button class="btn btn-success" [disabled]="!usersForm.valid">Cadastrar</button>
+
+        </form> 
+    </div>
+    <br/>
+
+</div>
