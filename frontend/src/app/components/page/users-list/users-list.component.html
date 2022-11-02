@@ -16,7 +16,7 @@
         </thead>
         <tbody>
             
-          <tr *ngFor="let data of listData">
+          <tr *ngFor="let data of dados">
             <th scope="row">{{data.id}}</th>
             <td class="name">{{data.name}}</td>
             <td class="email">{{data.email}}</td>
@@ -28,4 +28,6 @@
           </tr>
         </tbody>
       </table>
-</div>
+      <button class="btn btn-dark" routerLink="../new-users">Cadastrar</button>
+      </div>
+
